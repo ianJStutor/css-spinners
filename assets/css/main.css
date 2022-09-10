@@ -85,6 +85,21 @@ output {
     border-radius: 10px;
 }
 
+button {
+    font-size: 2em;
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: 2px solid var(--highlight);
+    background-color: var(--highlight-dark);
+    color: var(--light);
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+button:hover {
+    background-color: var(--highlight);
+}
+
 *::selection {
     background-color: var(--highlight-light);
 }

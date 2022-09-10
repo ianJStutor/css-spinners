@@ -1,4 +1,41 @@
+:root {
+    --spinner-size: 150px;
+    --spinner-spacing: 10px;
+}
+
+button {
+    width: 100%;
+    text-align: center;
+    height: 75px;
+    box-sizing: border-box;
+}
+
+.spinner {
+    display: inline-block;
+    width: var(--spinner-size);
+    height: var(--spinner-size);
+    margin: var(--spinner-spacing);
+    background: silver;
+}
+.spinner.pause,
+.spinner.pause::before,
+.spinner.pause::after {
+    animation-play-state: paused !important;
+}
+
+.spinner.pause:hover,
+.spinner.pause:active,
+.spinner.pause:hover::before,
+.spinner.pause:active::before,
+.spinner.pause:hover::after,
+.spinner.pause:active::after {
+    animation-play-state: running !important;
+}
+
 .spinner001 {}
+.spinner001::after { content: ""; display: block; width: 90%; height: 90%; margin-top: 0; margin-left: 0; background: conic-gradient(gold 90deg, black 90deg 180deg, gold 180deg 270deg, black 270deg); border-radius: 50%; animation: spinner001 1s infinite linear; box-shadow: 0 0 5px black; }
+
+@keyframes spinner001 {0%{margin-left:0;margin-top:0;transform:rotate(0);} 25%{margin-left:5%;margin-top:0;} 50%{margin-left:5%;margin-top:5%} 75%{margin-left:0;margin-top:5%} 100%{margin-left:0;margin-top:0;transform:rotate(360deg);} }
 .spinner002 {}
 .spinner003 {}
 .spinner004 {}
