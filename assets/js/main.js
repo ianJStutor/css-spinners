@@ -17,6 +17,8 @@ document.querySelector("header button").addEventListener("click", ({currentTarge
 document.querySelectorAll("main a").forEach(a => {
     a.addEventListener("click", e => {
         e.preventDefault();
+        const paused = a.classList.contains("pause");
+        if (paused) a.classList.remove("pause");
         const className = a.className.replace("spinner ", "");
         const rules = cssRules.filter(r => r.selectorText?.includes(className) || r.name?.includes(className)).map(r => r.cssText);
         const aside = document.createElement("aside");
@@ -28,6 +30,7 @@ document.querySelectorAll("main a").forEach(a => {
         document.body.append(aside);
         document.querySelector("aside:last-of-type button").addEventListener("click", e => {
             aside.outerHTML = "";
+            if (paused) a.classList.add("pause");
         });
     });
 });
