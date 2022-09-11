@@ -11,6 +11,24 @@ button {
     box-sizing: border-box;
 }
 
+aside {
+    position: fixed;
+    inset: 0;
+    overflow-y: auto;
+    background: black;
+    text-align: center;
+    display: grid;
+    place-items: center;
+}
+
+aside p {
+    margin: 0 auto;
+    max-width: 600px;
+    text-align: left;
+    font-family: monospace;
+    font-size: 10px;
+}
+
 .spinner {
     display: inline-block;
     width: var(--spinner-size);
@@ -61,7 +79,12 @@ button {
 .spinner007 { position: relative; }
 .spinner007::before { content: ""; display: block; position: absolute; inset: 0; border: dashed navy; border-radius: 50%; animation: spinner007 3s alternate infinite; }
 @keyframes spinner007 {from{border-width: 0;transform:rotate(0);} to{border-width: 55px;transform:rotate(575deg);}}
-.spinner008 {}
+.spinner008 { position: relative; background: radial-gradient(closest-side, transparent 96%, brown 96%, brown 99%, transparent 99%); }
+.spinner008::before,
+.spinner008::after { content: ""; display: block; position: absolute; top: 50%; left: 50%; box-sizing: border-box; height: 4px; border-top: 4px solid brown; transform-origin: top left; border-radius: 50%; }
+.spinner008::before { width: 40%; animation: spinner008 2s infinite linear; }
+.spinner008::after { width: 30%; animation: spinner008 10s infinite linear; }
+@keyframes spinner008 {0%{transform:rotate(0);} 50%{transform:rotate(180deg) translateY(-4px);} 100%{transform:rotate(360deg);}}
 .spinner009 {}
 .spinner010 {}
 .spinner011 {}
