@@ -85,7 +85,9 @@ aside p {
 .spinner008::before { width: 40%; animation: spinner008 2s infinite linear; }
 .spinner008::after { width: 30%; animation: spinner008 10s infinite linear; }
 @keyframes spinner008 {0%{transform:rotate(0);} 50%{transform:rotate(180deg) translateY(-4px);} 100%{transform:rotate(360deg);}}
-.spinner009 {}
+.spinner009 { position: relative; overflow: hidden; }
+.spinner009::before { content: ""; display: block; position: absolute; inset: 25%; background-color: seagreen; box-shadow: 2px 2px 10px black; animation: spinner009 6s infinite linear; }
+@keyframes spinner009 {25%{transform: skew(180deg, 0)} 75%{transform: skew(0, 180deg);}}
 .spinner010 {}
 .spinner011 {}
 .spinner012 {}
@@ -100,7 +102,12 @@ aside p {
 .spinner021 {}
 .spinner022 {}
 .spinner023 {}
-.spinner024 {}
+.spinner024 { position: relative; }
+.spinner024::before,
+.spinner024::after { content: ""; display: block; position: absolute; inset: 0; border-radius: 50%; mix-blend-mode: difference; }
+.spinner024::before { border: 40px dotted rgba(230, 230, 250, 0.5); animation: spinner024 2s infinite; }
+.spinner024::after { border: 40px dashed rgba(238, 130, 238, 0.95); animation: spinner024 12s reverse infinite linear; }
+@keyframes spinner024 {from{transform:rotate(0);} to{transform:rotate(360deg);}}
 .spinner025 {}
 .spinner026 {}
 .spinner027 {}
