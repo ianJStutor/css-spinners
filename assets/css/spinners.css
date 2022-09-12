@@ -157,7 +157,7 @@ aside p {
 .spinner023 { position: relative; }
 .spinner023::before,
 .spinner023::after { content: ""; display: block; position: absolute; animation: spinner023 1.5s infinite linear; }
-.spinner023::before { inset: 20%; border-radius: 50%; border-top: 10px solid yellow; border-right: 20px solid transparent; }
+.spinner023::before { inset: 20%; border-radius: 50%; border-top: 10px solid yellow; border-right: 20px solid transparent; filter: blur(3px); }
 .spinner023::after { inset: 10%; background: radial-gradient(closest-side circle at 75% 25%, white, yellow, transparent); }
 @keyframes spinner023 {from{transform:rotate(0);} to{transform:rotate(360deg);}}
 .spinner024 { position: relative; }
@@ -207,9 +207,9 @@ aside p {
 @keyframes spinner031 {from{transform:rotate(0);} to{transform:rotate(360deg);}}
 .spinner032 { position: relative; }
 .spinner032::before,
-.spinner032::after { content: ""; display: block; position: absolute; box-shadow: 0 3px 5px black; }
-.spinner032::before { inset: 10%; background-color: darkolivegreen; animation: spinner032 2s alternate infinite linear; }
-.spinner032::after { inset: 25%; background-color: darkkhaki; animation: spinner032 2s 0.75s alternate-reverse infinite linear; }
+.spinner032::after { content: ""; display: block; position: absolute; }
+.spinner032::before { inset: 10%; background-color: darkolivegreen; animation: spinner032 2s alternate infinite linear; box-shadow: 0 3px 5px black; }
+.spinner032::after { inset: 25%; background-color: darkkhaki; animation: spinner032 2s 0.75s alternate-reverse infinite linear; box-shadow: inset 0 3px 5px black; }
 @keyframes spinner032 {from{transform:rotate(-15deg);} to{transform:rotate(15deg);}}
 .spinner033 { position: relative; }
 .spinner033::before,
@@ -217,17 +217,39 @@ aside p {
 .spinner033::before { left: 16.6%; animation: spinner033 1s infinite ease-out; }
 .spinner033::after { right: 16.6%; animation: spinner033 1s 0.5s infinite ease-out; }
 @keyframes spinner033 {0%{transform:scale(1,1)} 10%{transform:scale(-1,1);} 20%{transform:scale(1,1);} 30%{transform:scale(-1,1);} 40%{transform:scale(1,1);} 50%{transform:scale(-1,1);} 65%{transform:scale(1,1);} 80%{transform:scale(-1,1);} 100%{transform:scale(1,1);}}
-.spinner034 {}
-.spinner035 {}
+.spinner034 { position: relative; }
+.spinner034::before,
+.spinner034::after { content: ""; display: block; position: absolute; inset: 15%; }
+.spinner034::before { background: conic-gradient(transparent 0.25turn, black 0.25turn 0.5turn, transparent 0.5turn 0.75turn, black 0.75turn); animation: spinner034 5s infinite linear; }
+.spinner034::after { background: conic-gradient(white 0.25turn, transparent 0.25turn 0.5turn, white 0.5turn 0.75turn, transparent 0.75turn); animation: spinner034 5s 0.25s reverse infinite linear; }
+@keyframes spinner034 {0%{transform:translate(0,0);} 12.5%{transform:translate(0,-5%);} 25%{transform:translate(0,0);} 37.5%{transform:translate(5%,0);} 50%{transform:translate(0,0);} 62.5%{transform:translate(0,5%);} 75%{transform:translate(0,0);} 87.5%{transform:translate(-5%,0);} 100%{transform:translate(0,0);} }
+.spinner035 { position: relative; }
+.spinner035::before,
+.spinner035::after { content: ""; display: block; position: absolute; border-radius: 50%; box-shadow: 0 0 5px 3px black, inset 0 0 5px 3px black; }
+.spinner035::before { inset: 35%; border: 10px groove yellowgreen; animation: spinner035 2s infinite linear; }
+.spinner035::after { inset: 5%; border: 30px ridge yellowgreen; animation: spinner035 2s infinite linear; }
+@keyframes spinner035 {from{transform: rotate(0);} to{transform: rotate(360deg);}}
 .spinner036 { position: relative; }
 .spinner036::before,
 .spinner036::after { content: ""; display: block; position: absolute; width: 15%; height: 15%; box-shadow: 0 0 3px black;  }
 .spinner036::before { top: 42.5%; left: 42.5%; background-color: darksalmon; border: 1px solid indianred; }
 .spinner036::after { top:22%; left:42.5%; transform: rotate(45deg); background-color: indianred; border: 1px solid darksalmon; animation: spinner036 3s infinite linear; }
 @keyframes spinner036 {0%{top:22%;left:42.5%;transform: rotate(45deg);} 12.5%{top:27%;left:57%;transform: rotate(135deg);} 25%{top:42.5%;left:63%;transform: rotate(225deg);} 38.5%{top:57%;left:57%;transform:rotate(315deg);} 50%{top:63%;left:42.5%;transform: rotate(405deg);} 62.5%{top:57%;left:27%;transform: rotate(495deg);} 75%{top:42.5%;left:22%;transform: rotate(585deg);} 87.5%{top:27%;left:27%;transform: rotate(675deg);} 100%{top:22%;left:42.5%;transform: rotate(765deg);}}
-.spinner037 {}
-.spinner038 {}
-.spinner039 {}
+.spinner037 { position: relative; }
+.spinner037::before,
+.spinner037::after { content: ""; display: block; position: absolute; inset: 10%; border-radius: 50%; background: radial-gradient(transparent, rgba(224, 165, 38, 0.75), transparent); }
+.spinner037::before { animation: spinner037 5s alternate infinite; }
+.spinner037::after { border: 1px solid white; box-shadow: 0 0 15px yellow; }
+@keyframes spinner037 {from{transform: scale(1);} to{transform: scale(0.1);}}
+.spinner038 { position: relative; overflow: hidden; }
+.spinner038::before,
+.spinner038::after { content: ""; display: block; position: absolute; inset: -14.14%; mix-blend-mode: difference; }
+.spinner038::before { background: repeating-linear-gradient(to right, springgreen, springgreen 15px, transparent 15px, transparent 30px); animation: spinner038 20s alternate infinite linear; }
+.spinner038::after { background: repeating-linear-gradient(to right, transparent, transparent 15px, springgreen 15px, springgreen 30px); animation: spinner038 20s alternate-reverse infinite linear; }
+@keyframes spinner038 {from{transform:rotate(-45deg);} to{transform:rotate(45deg);}}
+.spinner039 { position: relative; }
+.spinner039::before { content: ""; display: block; position: absolute; inset: 20%; border: 40px solid transparent; animation: spinner039 2.5s infinite linear; }
+@keyframes spinner039 {0%{border-color:transparent;border-left-color:navy;} 25%{border-color:transparent;border-top-color:navy;} 50%{border-color:transparent;border-right-color:navy;} 75%{border-color:transparent;border-bottom-color:navy;} 100%{border-color:transparent;border-left-color:navy;}}
 .spinner040 { position: relative; }
 .spinner040::before { content: ""; display: block; position: absolute; width: 50%; height: 50%; background: linear-gradient(darkred, red); box-shadow: 0 0 3px black; animation: spinner040 2s infinite linear; }
 @keyframes spinner040 {0%{top:0;left:0;transform:scale(1,1);} 25%{top:0;left:50%;transform:scale(-1,1);} 50%{top:50%;left:50%;transform:scale(-1,-1);} 75%{top:50%;left:0;transform:scale(1,-1);} 100%{top:0;left:0;transform:scale(1,1);}}
