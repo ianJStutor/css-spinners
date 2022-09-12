@@ -104,15 +104,44 @@ aside p {
 .spinner012 { position: relative; overflow: hidden; }
 .spinner012::before { content: ""; display: block; position: absolute; inset: 10%; border: 5px solid hotpink; box-shadow: 0 0 20px 5px hotpink, inset 0 0 20px 5px hotpink; animation: spinner012 4s infinite; }
 @keyframes spinner012 {50%{border-radius: 50%; transform: rotate(360deg) scale(0.25);}}
-.spinner013 {}
-.spinner014 {}
+.spinner013 { position: relative; overflow: hidden; }
+.spinner013::before,
+.spinner013::after { content: ""; display: block; position: absolute; inset: 25%; border-radius: 25px; background: black; box-shadow: 0 0 10px black; }
+.spinner013::before { animation: spinner013b 4s infinite linear; }
+.spinner013::after { animation: spinner013a 4s reverse infinite linear; }
+@keyframes spinner013a {from{transform:scale(1, 1.5) rotate(0);} to{transform:scale(1, 1.5) rotate(360deg);}}
+@keyframes spinner013b {from{transform:scale(1.5, 1) rotate(0);} to{transform:scale(1.5, 1) rotate(360deg);}}
+.spinner014 { position: relative; }
+.spinner014::before,
+.spinner014::after { content: ""; display: block; position: absolute; inset: 40% 0; }
+.spinner014::before { background: radial-gradient(circle closest-side, goldenrod 99%, transparent 99%); animation: spinner014 3s infinite alternate ease-in-out; }
+.spinner014::after { background: radial-gradient(closest-side circle at 25% center, goldenrod 99%, transparent 99%), radial-gradient(closest-side circle at 75% center, goldenrod 99%, transparent 99%); animation: spinner014 3s alternate-reverse infinite ease-in-out; }
+@keyframes spinner014 {from{transform:translateY(-200%);} to{transform:translateY(200%);}}
 .spinner015 {}
-.spinner016 {}
-.spinner017 {}
-.spinner018 {}
+.spinner015::before { content: ""; display: block; height: 1px; margin-top: calc(50% - 30px); border-radius: 50%; border-left: 30px solid transparent; border-right: 30px solid transparent; border-top: 30px solid dodgerblue; border-bottom: 30px solid dodgerblue; animation: spinner015 2s infinite ease-in-out; }
+@keyframes spinner015 {from{transform: scale(1,2);} to{transform: scale(1,-2);}}
+.spinner016 { position: relative; }
+.spinner016::before,
+.spinner016::after { content: ""; display: block; position: absolute; inset: 20%; border: 1px solid black; border-radius: 40%; }
+.spinner016::before { animation: spinner016a 1s infinite linear, spinner016b 5s alternate infinite; }
+.spinner016::after { animation: spinner016a 1s reverse infinite linear, spinner016c 6s alternate infinite; }
+@keyframes spinner016a {from{transform:rotate(0);} to{transform:rotate(360deg);}}
+@keyframes spinner016b {0%{transform-origin: 45% center;} 50%{transform-origin: center center;} 100%{transform-origin: 55% center;}}
+@keyframes spinner016c {0%{transform-origin: center 45%;} 50%{transform-origin: center center;} 100%{transform-origin: center 55%;}}
+.spinner017 { position: relative; overflow: hidden; }
+.spinner017::before { content: ""; display: block; position: absolute; inset: 10%; clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%); background: linear-gradient(burlywood, chocolate); animation: spinner017 2.5s infinite ease-out; }
+@keyframes spinner017 {0%{transform:translateX(-100%);} 35%{transform:translateX(5%);} 50%{transform:translateX(0);} 60%{transform:translateX(0);} 100%{transform:translateX(110%);} }
+.spinner018 { position: relative; }
+.spinner018::before,
+.spinner018::after { display: block; position: absolute; }
+.spinner018::before { content: ""; inset: 50% 5% 40%; border-radius: 10px; background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet, red); background-size: 500%; box-shadow: 0 3px 10px 2px black; animation: spinner018 10s infinite linear; }
+.spinner018::after { content: "Loading..."; inset: 30% 5%; text-align: center; font-family: sans-serif; font-weight: 800; }
+@keyframes spinner018 {from{background-position: 0 0;} to{background-position: 500% 0;}}
 .spinner019 {}
 .spinner020 {}
-.spinner021 {}
+.spinner021 { position: relative; }
+.spinner021::before { content: ""; display: block; position: absolute; inset: 10%; background: radial-gradient(closest-side circle at 15% 15%, crimson 99%, transparent 99%), radial-gradient(closest-side circle at 85% 15%, crimson 99%, transparent 99%), radial-gradient(closest-side circle at 15% 85%, crimson 99%, transparent 99%), radial-gradient(closest-side circle at 85% 85%, crimson 99%, transparent 99%); animation: spinner021 1.5s infinite linear; }
+@keyframes spinner021 {0%{transform: scale(1) rotate(0);} 50%{transform: scale(0.5) rotate(180deg);} 100%{transform: scale(1) rotate(360deg);}}
 .spinner022 {}
 .spinner023 {}
 .spinner024 { position: relative; }
