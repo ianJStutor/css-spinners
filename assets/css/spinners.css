@@ -253,15 +253,31 @@ aside p {
 .spinner040 { position: relative; }
 .spinner040::before { content: ""; display: block; position: absolute; width: 50%; height: 50%; background: linear-gradient(darkred, red); box-shadow: 0 0 3px black; animation: spinner040 2s infinite linear; }
 @keyframes spinner040 {0%{top:0;left:0;transform:scale(1,1);} 25%{top:0;left:50%;transform:scale(-1,1);} 50%{top:50%;left:50%;transform:scale(-1,-1);} 75%{top:50%;left:0;transform:scale(1,-1);} 100%{top:0;left:0;transform:scale(1,1);}}
-.spinner041 {}
-.spinner042 {}
-.spinner043 {}
-.spinner044 {}
+.spinner041 { position: relative; }
+.spinner041::before,
+.spinner041::after { content: ""; display: block; position: absolute; border-radius: 50%; }
+.spinner041::before { inset: 10%; background: linear-gradient(transparent 48%, red 48%, red 52%, transparent 52%); animation: spinner041 1s infinite; }
+.spinner041::after { inset: 20%; background: white; border: 5px solid black; box-shadow: inset 0 0 4px black; }
+@keyframes spinner041 {from{transform: rotate(0);} to{transform: rotate(360deg);}}
+.spinner042 { position: relative; }
+.spinner042::before { content: ""; display: block; position: absolute; inset: 0 25% 50%; border-left: 37px solid transparent; border-right: 37px solid transparent; border-bottom: 75px ridge green; transform-origin: 50% 100%; animation: spinner042 3s infinite linear; }
+@keyframes spinner042 {0%{transform: rotate(0);} 8%{transform: rotate(90deg);} 9%{transform: rotate(100deg);} 10%{transform: rotate(90deg);} 25%{transform: rotate(90deg);} 33%{transform: rotate(180deg);} 34%{transform: rotate(190deg);} 35%{transform: rotate(180deg);} 50%{transform: rotate(180deg);} 58%{transform: rotate(270deg);} 59%{transform: rotate(280deg);} 60%{transform: rotate(270deg);} 75%{transform: rotate(270deg);} 83%{transform: rotate(360deg);} 84%{transform: rotate(370deg);} 85%{transform: rotate(360deg);} 100%{transform: rotate(360deg);}}
+.spinner043 { position: relative; overflow: hidden; }
+.spinner043::before { content: ""; display: block; position: absolute; inset: 5% 20% 20% 5%; border-radius: 50%; border: 5px solid gold; background: radial-gradient(closest-side circle at 61% 61%, chocolate, saddlebrown 75%, black 75%, black 90%, transparent 90%); box-shadow: 0 0 5px 2px black, inset 0 0 5px 2px black; transform-origin: 61% 61%; animation: spinner043 1s infinite linear; }
+@keyframes spinner043 {from{transform: rotate(0);} to{transform: rotate(360deg);}}
+.spinner044 { position: relative; overflow: hidden; }
+.spinner044::before,
+.spinner044::after { content: ""; display: block; position: absolute; width: 100%; height: 100%; border-radius: 50%; background: radial-gradient(transparent 50%, slategrey 50%), linear-gradient(0deg, transparent 45%, black 45%, slategrey 50%, black 55%, transparent 55%), linear-gradient(60deg, transparent 45%, black 45%, slategrey 50%, black 55%, transparent 55%), linear-gradient(120deg, transparent 45%, black 45%, slategrey 50%, black 55%, transparent 55%); outline: 22px dashed #333; box-shadow: inset 0 0 5px 2px black, 0 0 15px 5px black; }
+.spinner044::before { top: 30%; left: -60%; animation: spinner044 2s infinite linear; }
+.spinner044::after { top: -5%; left: 65%; animation: spinner044 2s reverse infinite linear; }
+@keyframes spinner044 {from{transform: rotate(0);} to{transform: rotate(360deg);}}
 .spinner045 {}
 .spinner046 {}
 .spinner047 {}
 .spinner048 {}
-.spinner049 {}
+.spinner049 { position: relative; }
+.spinner049::before { content: ""; display: block; position: absolute; inset: 5%; background: radial-gradient(closest-side circle at 15% 15%, red 100%, transparent 100%), radial-gradient(closest-side circle at 85% 15%, red 100%, transparent 100%), radial-gradient(closest-side circle at 15% 85%, red 100%, transparent 100%), radial-gradient(closest-side circle at 85% 85%, red 100%, transparent 100%); animation: spinner049 2s infinite; }
+@keyframes spinner049 {from{transform:scale(1,1) rotate(0);} to{transform:scale(-1,-1) rotate(90deg);}}
 .spinner050 {}
 .spinner051 {}
 .spinner052 {}
