@@ -4,7 +4,7 @@
 
 ## Description
 
-CSS animations are awesome and can do some pretty amazing things. Here are 100 CSS-only "loading" spinners direct from my imagination.
+CSS animations are awesome and can do some pretty amazing things. Here are 50 CSS-only "loading" spinners direct from my imagination.
 
 ## Author
 
